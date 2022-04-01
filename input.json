@@ -1,0 +1,110 @@
+{
+    "blade params":
+    {
+	"length": 0.5,
+	"EI": 1.0,
+	"nodes": 101
+    }
+}
+
+{
+    "nlopt params":
+    {
+	"relative ftol": 1e-8,
+	"relative xtol": 1e-4
+    }
+}
+
+{
+    "ipopt params":
+    {
+	"linear_solver": "pardiso",
+	"objective scale factor": 1,
+	"hessian approximation": "limited-memory",
+	"warm start initial point": "yes",
+	"warm start bound": 1e-6,
+	"warm start multiplier bound": 1e-6
+    }
+}
+
+{
+    "target shape":
+    {
+	"filename": "../target.txt",
+	"num samples per interval": 25
+    }
+}
+
+{
+    "virtual block":
+    {
+	"center": [0.25,0.25],
+	"size": 0.5
+    }
+}
+
+{
+    "cut tolerances":
+    {
+	"distance tolerance": 1e-3,
+	"elements on blade": 4
+    }
+}
+
+{
+    "elastica solver params":
+    {
+	"convergence tol": 1e-6,
+	"residual scaling": 1.0,
+	"dof scaling": 1.0,
+	"maximum iterations": 50,
+	"verbosity": false
+    }
+}
+
+{
+    "optimization parameters":
+    {
+	"H": true,
+	"V": true,
+	"M": true,
+	"BC": true,
+	"axial": false,
+	"radial": true
+    }
+}
+
+{
+    "parameter bounds":
+    {
+	"H": [-1e12, 1e12],
+	"V": [-1e12, 1e12],
+	"M": [-1e12, 1e12],
+	"BC": [-3.1514, 3.1415],
+	"axial": [-1 ,1],
+	"radial": [0.2524, 0.7]
+    }
+}
+
+{
+    "rough cut":
+    {
+	"number of profiles": 11,
+	"mapped parameter on profile": 0.5, 
+	"mapped node on blade": 0.5
+    }
+}
+
+{
+    "initial params":
+    {
+	"H": 0.0,
+	"V": 0.0,
+	"M": 0.2,
+	"BC": 0.0
+    }
+}
+
+{
+    "weight function param": 500.0
+}
